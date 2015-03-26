@@ -1,0 +1,26 @@
+h1 {
+  margin-bottom: 5px;
+}
+
+ul.posts {
+  list-style-type: none;
+}
+
+ul.tags {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul.tags li {
+  background-color: #FFEBCD;
+  border-radius: 8px;
+  color: #333333;
+  display: inline;
+  margin-left: 1px;
+  padding: 1px 4px;
+}
+
+code {
+  background-color: #F8F8FF;
+}
