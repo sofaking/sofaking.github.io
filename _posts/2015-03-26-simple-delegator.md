@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Override Selenium Element#click with SimpleDelegator
 tags: ruby selenium
 ---
