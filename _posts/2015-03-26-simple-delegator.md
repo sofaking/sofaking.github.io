@@ -32,7 +32,7 @@ def compose_button
   FlickeringButton.new(find_element(name: 'Compose')).click
 end
 
-def FlickeringButton < SimpleDelegator
+class FlickeringButton < SimpleDelegator
   def click
     start = Time.now
     begin
