@@ -17,9 +17,6 @@ On Nexus 5 with Android 5.1 on board it could be done with a command below. Plea
 adb shell am start com.android.settings/.DeviceAdminSettings
 {% endhighlight %}
 
-<br />
-<br />
-
 ### Bonus track
 
 The whole Ruby module I'm using to do that:
