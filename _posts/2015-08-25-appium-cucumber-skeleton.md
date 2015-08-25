@@ -51,12 +51,11 @@ Appium.promote_appium_methods([App, PageObject])
 
 World(App)
 {% endhighlight %}
-
 * newCommandTimeout: 300 - allows you to take your time while debugging with pry. Default value is too short
 * wait: 1 - reduced default timeout for find_element to 1 second. Usually mobile applications are quite snappy so that's enough.
  In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`
- 
- 
+<br />
+<br />
 {% highlight ruby %}
 # features/support/app.rb
 module App
