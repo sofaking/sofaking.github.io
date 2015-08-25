@@ -51,11 +51,11 @@ Appium.promote_appium_methods([App, PageObject])
 
 World(App)
 {% endhighlight %}
-Notes:
 
 * newCommandTimeout: 300 - allows you to take your time while debugging with pry. Default value is too short
 * wait: 1 - reduced default timeout for find_element to 1 second. Usually mobile applications are quite snappy so that's enough.
  In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`
+
 
 {% highlight ruby %}
 # features/support/app.rb
@@ -69,9 +69,9 @@ module App
   end
 end
 {% endhighlight %}
-Notes:
 
 * this is shamelessly ripped from page_object gem. But basically, you can do in step files something like `on(LoginPage).login_with login, password`
+
 
 {% highlight ruby %}
 # lib/page_object.rb
@@ -80,7 +80,6 @@ end
 
 Pathname('lib/page_objects').each_child { |file| require file.expand_path }
 {% endhighlight %}
-Notes:
 
 * PageObject has to be included in every page object (located in `lib/page_objects`)
 * `Pathname('lib/page_objects')...` automatically requires every page object file. Has to be slightly improved in case page_objets has subdirectories.
