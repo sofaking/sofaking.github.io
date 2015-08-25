@@ -20,6 +20,7 @@ adb shell am start com.android.settings/.DeviceAdminSettings
 <br />
 <br />
 ### Bonus track
+
 The whole Ruby module I'm using to do that:
 {% highlight ruby %}
 module Device
