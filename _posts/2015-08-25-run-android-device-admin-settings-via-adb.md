@@ -19,7 +19,7 @@ adb shell am start com.android.settings/.DeviceAdminSettings
 
 ### Bonus track
 
-The whole Ruby module I'm using to do that:
+Ruby module I'm using to do that from tests:
 {% highlight ruby %}
 module Device
   def deactivate_device_administrator(app_name)
