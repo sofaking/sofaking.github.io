@@ -54,7 +54,7 @@ World(App)
 
 * newCommandTimeout: 300 - allows you to take your time while debugging with pry. Default value is too short
 * wait: 1 - reduced default timeout for find_element to 1 second. Usually mobile applications are quite snappy so that's enough.
- In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`
+ In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`  
 
 
 
