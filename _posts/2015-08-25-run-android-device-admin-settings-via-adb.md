@@ -53,7 +53,9 @@ end
 
 And somewhere in step definitions:
 {% highlight ruby %}
+Given(/^I've installed the app$/) do
   start_driver
   deactivate_device_administrator 'Very Demanding App'
   restart
+end
 {% endhighlight %}
