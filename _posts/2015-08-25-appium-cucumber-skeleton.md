@@ -70,8 +70,8 @@ end
 {% endhighlight %}
 
 * this is shamelessly ripped from page_object gem. But basically, you can do in step files something like `on(LoginPage).login_with login, password`
- 
- 
+<br />
+<br />
 {% highlight ruby %}
 # lib/page_object.rb
 module PageObject
