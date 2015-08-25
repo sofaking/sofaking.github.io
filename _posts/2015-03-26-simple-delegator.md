@@ -19,7 +19,7 @@ def compose
   begin
     find_element(name: 'Compose').click
   rescue Selenium::WebDriver::Error::UnknownError => e
-    fail "Compose button hasn't been tapped in 5 seconds" if Time.now - start > 5
+    fail "Compose button hasn't been tapped in 5 seconds" if Time.now > start + 5
     retry if e.message.include?('could not be tapped')
     raise e
   end
@@ -38,7 +38,7 @@ class FlickeringButton < SimpleDelegator
     begin
       super
     rescue Selenium::WebDriver::Error::UnknownError => e
-      fail "Button hasn't been tapped in 5 seconds" if Time.now - start > 5
+      fail "Button hasn't been tapped in 5 seconds" if Time.now > start + 5
       retry if e.message.include?('could not be tapped')
       raise e
     end
