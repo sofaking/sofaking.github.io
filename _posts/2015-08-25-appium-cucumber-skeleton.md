@@ -54,9 +54,7 @@ World(App)
 
 * newCommandTimeout: 300 - allows you to take your time while debugging with pry. Default value is too short
 * wait: 1 - reduced default timeout for find_element to 1 second. Usually mobile applications are quite snappy so that's enough.
- In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`  
-
-
+ In complicated cases, like communication with server, I prefer explicit Spin Asserts, like `wait_true`    
 
 {% highlight ruby %}
 # features/support/app.rb
@@ -72,8 +70,6 @@ end
 {% endhighlight %}
 
 * this is shamelessly ripped from page_object gem. But basically, you can do in step files something like `on(LoginPage).login_with login, password`
-
-
 
 {% highlight ruby %}
 # lib/page_object.rb
