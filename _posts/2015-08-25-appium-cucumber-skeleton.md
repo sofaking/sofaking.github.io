@@ -29,7 +29,7 @@ The tree looks like this:
 | |__page_objects\
 {% endhighlight %}
 
-And the contend of these files as follows:
+And the contens of these files as follows:
 
 {% highlight ruby %}
 # features/support/env.rb
