@@ -12,13 +12,16 @@ tags: tfs team-explorer-everywhere bash
 </ul>
 
 At my current job I have to deal with TFS and since I'm on Mac and prefer to work from terminal here are my notes:
+
 - unmap all workspace mappings:
+
 ```bash
 tf workfold -workspace:workspace_name | grep Users | cut -d ' ' -f 2 | sed 's/.$//' | xargs -I FILE tf workfold -workspace:workspace_name -unmap FILE
 ```
 `tf workfold` output usually consists of pairs of server/local folder mappings and some garbage. `grep Users` cut all garbage off, `cut -d ' ' -f 2` leaves only first element of mapping pair, which is server path, `sed 's/.$//'` removes last symbol in path which is ':' and then `xargs` passes each line of output as argument for `tf workfold`. Simple, isn't it.
 
 - map folders as per workspace.txt:
+
 ```bash
 sed -e 's/://' -e 's/\\/\//g' -e 's/\$(SourceDir)/\/Users\/aup\/Documents\/workspace_name/' workspace.txt | tr -d '/015' | xargs -n 2 -t sh -c 'tf workfold -workspace:workspace_name -map $1 $2' argv0
 ```
