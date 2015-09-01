@@ -35,11 +35,12 @@ Simple, isn't it
 {% highlight bash %}
 sed -e 's/://' -e 's/\\/\//g' -e 's/\$(SourceDir)/\/Users\/aup\/Documents\/workspace_name/' workspace.txt |
  tr -d '/015' |
- xargs -n 2 -t sh -c 'tf workfold -workspace:workspace_name -map $1 $2' argv0
+ xargs -n 2 sh -c 'tf workfold -workspace:workspace_name -map $1 $2' argv0
 {% endhighlight %}
 
 sed part is quite straightforward, but the rest is rather tricky.  
 `tr` removes carriage return symbols brought from Windows  
 `-n 2`, `sh -c` and `argv0` are all necessary for `xargs` here, since only with this mix I was able to get `tf` to accept arguments. Plain execution of tf command (like in unmap example) doesn't work here  
 `-n 2` splits imput in pairs of arguments  
-`argv0` passes those arguments to `sh -c`, that in turn just executes given string as shell command
+`argv0` passes those arguments to `sh -c`, that in turn just executes given string as shell command  
+BTW, very useful option for xargs debugging: `-t`
