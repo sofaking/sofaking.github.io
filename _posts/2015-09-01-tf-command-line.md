@@ -1,6 +1,6 @@
 ---
 layout: default
-title: tf command line tips
+title: tf command-line tips
 tags: tfs team-explorer-everywhere bash
 ---
 
