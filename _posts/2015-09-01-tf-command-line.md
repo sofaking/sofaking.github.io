@@ -34,7 +34,7 @@ Simple, isn't it
 
 {% highlight bash %}
 sed -e 's/://' -e 's/\\/\//g' -e 's/\$(SourceDir)/\/Users\/aup\/Documents\/workspace_name/' workspace.txt |
- tr -d '/015' |
+ tr -d '\015' |
  xargs -n 2 sh -c 'tf workfold -workspace:workspace_name -map $1 $2' argv0
 {% endhighlight %}
 
