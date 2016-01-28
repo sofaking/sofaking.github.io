@@ -2,6 +2,7 @@
 layout: default
 title: Skeleton for Appium-Cucumber tests
 tags: ruby appium cucumber
+category: en
 ---
 
 # {{ page.title }}

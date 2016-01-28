@@ -2,6 +2,7 @@
 layout: default
 title: Run Android Device Administrator Settings via adb
 tags: android adb appium
+category: en
 ---
 
 # {{ page.title }}

@@ -2,6 +2,7 @@
 layout: default
 title: Override Selenium's Element#click with SimpleDelegator
 tags: ruby selenium
+category: en
 ---
 
 # {{ page.title }}

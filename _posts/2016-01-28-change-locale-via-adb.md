@@ -2,6 +2,7 @@
 layout: default
 title: Изменение локали в Андроид через adb
 tags: adb locale android
+category: ru
 ---
 
 # {{ page.title }}
@@ -16,7 +17,9 @@ tags: adb locale android
 {% highlight bash %}
 adb shell 'setprop persist.sys.language en; setprop persist.sys.country US; setprop ctl.restart zygote'
 {% endhighlight %}
+Подробнее что такое zygote: [ru](https://xakep.ru/2014/05/21/excurse-in-android-architecture), [en](http://anatomyofandroid.com/2013/10/15/zygote).
 
+<br />
 Известные мне пары языков:
 {% highlight ruby %}
 [
